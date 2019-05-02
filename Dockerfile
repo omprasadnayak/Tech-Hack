@@ -1,4 +1,4 @@
-FROM java:8-jdk-alpine
+FROM openjdk
 
 COPY ./target/hello-world-0.1.0.jar /usr/app/
 
