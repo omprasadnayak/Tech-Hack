@@ -13,6 +13,9 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
+- task: Docker@2
+  inputs:
+    command: 'buildAndPush'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
