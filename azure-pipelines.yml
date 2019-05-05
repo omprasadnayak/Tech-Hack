@@ -1,4 +1,9 @@
 # Maven
+- task: Docker@2
+  inputs:
+    containerRegistry: '69f71426-5f60-4a6f-a4fe-c390ce9b2d3e'
+    repository: 'nayakomprasad/application'
+    command: 'buildAndPush'
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
