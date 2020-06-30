@@ -8,8 +8,7 @@ steps:
 - task: Maven@3
   displayName: 'Maven pom.xml'
   inputs:
-    mavenPomFile: '$(Parameters.mavenPOMFile)'
-	
+    mavenPomFile: '$(Parameters.mavenPOMFile)'	
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   inputs:
@@ -17,7 +16,6 @@ steps:
     Contents: '**/*.jar'
     TargetFolder: '$(build.artifactstagingdirectory)'
   condition: succeededOrFailed()
-  
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   inputs:
